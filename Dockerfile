@@ -16,6 +16,6 @@ VOLUME ["/var/lib/transmission-daemon"]
 VOLUME ["/etc/transmission-daemon"]
 
 EXPOSE 9091
-EXPOSE 12345
+EXPOSE 51413
 
 CMD ["/run_transmission.sh"]
