@@ -15,6 +15,7 @@ RUN mkdir -p /var/lib/transmission-daemon/incomplete && \
 VOLUME ["/var/lib/transmission-daemon/downloads"]
 VOLUME ["/var/lib/transmission-daemon/incomplete"]
 VOLUME ["/etc/transmission-daemon/resume"]
+VOLUME ["/etc/transmission-daemon/torrents"]
 
 EXPOSE 9091
 EXPOSE 51413
