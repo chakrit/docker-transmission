@@ -12,7 +12,11 @@ if [[ ! -f ${SETTINGS}.bak ]]; then
         exit 1
     fi
 
-    sed -i.bak -e "s/@password@/$ADMIN_PASS/" $SETTINGS 
+    if [ -z $ADMIN_USER ]; then
+        ADMIN_USER=transmission
+    fi
+
+    sed -i.bak -e "s/@password@/$ADMIN_PASS/" -e "s/@username@/$ADMIN_USER/" $SETTINGS 
 fi
 
 unset TRANSMISION_ADMIN_PASS
